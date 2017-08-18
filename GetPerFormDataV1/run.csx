@@ -9,7 +9,7 @@ public static async Task<HttpResponseMessage> Run(HttpRequestMessage req, TraceW
 {
     log.Info("C# HTTP trigger function processed a request.");
 
-    fieldJSON = GetJson();
+    var fieldJSON = GetJson();
 
     return req.CreateResponse(HttpStatusCode.OK,  fieldJSON);
 }
