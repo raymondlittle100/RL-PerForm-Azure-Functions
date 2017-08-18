@@ -9,16 +9,9 @@ public static async Task<HttpResponseMessage> Run(HttpRequestMessage req, TraceW
 {
     log.Info("C# HTTP trigger function processed a request.");
 
-    // parse query parameter
-    string name = req.GetQueryNameValuePairs()
-        .FirstOrDefault(q => string.Compare(q.Key, "name", true) == 0)
-        .Value;
+    fieldJSON = GetJson();
 
-    var fieldJSON = GetJson();
-
-    return name == null
-        ? req.CreateResponse(HttpStatusCode.BadRequest, "Please pass a name on the query string or in the request body")
-        : req.CreateResponse(HttpStatusCode.OK,  fieldJSON);
+    return req.CreateResponse(HttpStatusCode.OK,  fieldJSON);
 }
 
 public static string GetJson() 
