@@ -73,6 +73,7 @@ public static string GetJson()
     fields.Add(fieldOne);
     fields.Add(fieldTwo);
     fields.Add(fieldThree);
+    fields.Add(fieldFour);
   return JsonConvert.SerializeObject(fields);
 }
 
