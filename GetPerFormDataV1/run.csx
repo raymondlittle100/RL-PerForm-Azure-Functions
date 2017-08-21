@@ -19,18 +19,46 @@ public static string GetJson()
     List<FieldDetails> fields = new List<FieldDetails>();
   var fieldOne = new FieldDetails();
   fieldOne.type = "input";
-  fieldOne.content = "Raymond test";
+  fieldOne.content = "Raymond";
   fieldOne.dataMapping = "FirstName";
   fieldOne.label = "First Name";
-  fieldOne.showLabel = true;
+  fieldOne.showLabel = false;
   fieldOne.required = true;
   fieldOne.readOnly = true;
   fieldOne.showDescription = false;
   fieldOne.description = "Please supply your first name";
   fieldOne.cssClass = "firstName";
   fieldOne.maxLength = 50;
+   
+  var fieldTwo = new FieldDetails();
+  fieldTwo.type = "input";
+  fieldTwo.content = "Little";
+  fieldTwo.dataMapping = "SecondName";
+  fieldTwo.label = "Second Name";
+  fieldTwo.showLabel = false;
+  fieldTwo.required = true;
+  fieldTwo.readOnly = true;
+  fieldTwo.showDescription = false;
+  fieldTwo.description = "Please supply your last name";
+  fieldTwo.cssClass = "lastName";
+  fieldTwo.maxLength = 50;
+   
+  var fieldThree = new FieldDetails();
+  fieldThree.type = "input";
+  fieldThree.content = "11/08/1982";
+  fieldThree.dataMapping = "DoB";
+  fieldThree.label = "Date of Birth";
+  fieldThree.showLabel = false;
+  fieldThree.required = true;
+  fieldThree.readOnly = true;
+  fieldThree.showDescription = false;
+  fieldThree.description = "Please supply your DoB";
+  fieldThree.cssClass = "dob";
+  fieldThree.maxLength = 50;
 
     fields.Add(fieldOne);
+    fields.Add(fieldTwo);
+    fields.Add(fieldThree);
   return JsonConvert.SerializeObject(fields);
 }
 
