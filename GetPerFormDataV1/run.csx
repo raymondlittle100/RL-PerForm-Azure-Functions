@@ -24,8 +24,8 @@ public static string GetJson()
   fieldOne.label = "First Name";
   fieldOne.showLabel = true;
   fieldOne.required = true;
-  fieldOne.readOnly = false;
-  fieldOne.showDescription = true;
+  fieldOne.readOnly = true;
+  fieldOne.showDescription = false;
   fieldOne.description = "Please supply your first name";
   fieldOne.cssClass = "firstName";
   fieldOne.maxLength = 50;
