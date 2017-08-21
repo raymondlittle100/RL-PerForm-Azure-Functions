@@ -43,6 +43,19 @@ public static string GetJson()
   fieldOne.description = "Please supply your first name";
   fieldOne.cssClass = "firstName";
   fieldOne.maxLength = 50;
+
+  var fieldFive = new FieldDetails();
+  fieldFive.type = "input";
+  fieldFive.content = "william";
+  fieldFive.dataMapping = "MiddleName";
+  fieldFive.label = "Middle Name";
+  fieldFive.showLabel = false;
+  fieldFive.required = true;
+  fieldFive.readOnly = true;
+  fieldFive.showDescription = false;
+  fieldFive.description = "Please supply your middle name";
+  fieldFive.cssClass = "middleName";
+  fieldFive.maxLength = 50;
    
   var fieldTwo = new FieldDetails();
   fieldTwo.type = "input";
@@ -74,6 +87,7 @@ public static string GetJson()
     fields.Add(fieldTwo);
     fields.Add(fieldThree);
     fields.Add(fieldFour);
+    fields.Add(fieldFive);
   return JsonConvert.SerializeObject(fields);
 }
 
