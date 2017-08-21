@@ -17,6 +17,20 @@ public static async Task<HttpResponseMessage> Run(HttpRequestMessage req, TraceW
 public static string GetJson() 
 {
     List<FieldDetails> fields = new List<FieldDetails>();
+
+    var fieldFour = new FieldDetails();
+  fieldFour.type = "select";
+  fieldFour.content = "2";
+  fieldFour.dataMapping = "prefix";
+  fieldFour.label = "Title";
+  fieldFour.showLabel = false;
+  fieldFour.required = true;
+  fieldFour.readOnly = true;
+  fieldFour.showDescription = false;
+  fieldFour.description = "Please supply your title";
+  fieldFour.cssClass = "prefix";
+  fieldFour.maxLength = 50;
+
   var fieldOne = new FieldDetails();
   fieldOne.type = "input";
   fieldOne.content = "Raymond";
