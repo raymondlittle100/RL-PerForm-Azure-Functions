@@ -106,6 +106,7 @@ tabOneSectionOne.titleVisible= true;
 tabOneSectionOne.columnLayout="twoColumn";
 tabOneSectionOne.collapsed= false;
 tabOneSectionOne.fieldCollection = fields;
+tabOneSectionOne.visible = true;
 
 Section tabOneSectionTwo = new Section();
 tabOneSectionTwo.title="Section Two";
@@ -113,6 +114,7 @@ tabOneSectionTwo.titleVisible= true;
 tabOneSectionTwo.columnLayout="oneColumn";
 tabOneSectionTwo.collapsed= false;
 tabOneSectionTwo.fieldCollection = fields;
+tabOneSectionTwo.visible = true;
 
 tabOneSections.Add(tabOneSectionOne);
 tabOneSections.Add(tabOneSectionTwo);
@@ -128,6 +130,7 @@ tabTwoSectionOne.titleVisible= true;
 tabTwoSectionOne.columnLayout="threeColumn";
 tabTwoSectionOne.collapsed= false;
 tabTwoSectionOne.fieldCollection = fields;
+tabTwoSectionOne.visible = true;
 
 Section tabTwoSectionTwo = new Section();
 tabTwoSectionTwo.title="Section Two";
@@ -135,6 +138,7 @@ tabTwoSectionTwo.titleVisible= true;
 tabTwoSectionTwo.columnLayout="twoColumn";
 tabTwoSectionTwo.collapsed= false;
 tabTwoSectionTwo.fieldCollection = fields;
+tabTwoSectionTwo.visible = true;
 
 Section tabTwoSectionThree = new Section();
 tabTwoSectionThree.title="Section Three";
@@ -150,6 +154,7 @@ tabTwoSectionFour.titleVisible= true;
 tabTwoSectionFour.columnLayout="twoColumn";
 tabTwoSectionFour.collapsed= false;
 tabTwoSectionFour.fieldCollection = fields;
+tabTwoSectionFour.visible = true;
 
 tabTwoSections.Add(tabTwoSectionOne);
 tabTwoSections.Add(tabTwoSectionTwo);
@@ -167,6 +172,7 @@ tabThreeSectionOne.titleVisible= true;
 tabThreeSectionOne.columnLayout="threeColumn";
 tabThreeSectionOne.collapsed= false;
 tabThreeSectionOne.fieldCollection = fields;
+tabThreeSectionOne.visible = true;
 
 Section tabThreeSectionTwo = new Section();
 tabThreeSectionTwo.title="Section Two";
@@ -174,6 +180,7 @@ tabThreeSectionTwo.titleVisible= true;
 tabThreeSectionTwo.columnLayout="twoColumn";
 tabThreeSectionTwo.collapsed= false;
 tabThreeSectionTwo.fieldCollection = fields;
+tabThreeSectionTwo.visible = true;
 
 tabThreeSections.Add(tabThreeSectionOne);
 tabThreeSections.Add(tabThreeSectionTwo);
@@ -189,6 +196,7 @@ tabFourSectionOne.titleVisible= true;
 tabFourSectionOne.columnLayout="threeColumn";
 tabFourSectionOne.collapsed= false;
 tabFourSectionOne.fieldCollection = fields;
+tabFourSectionOne.visible = true;
 
 tabFourSections.Add(tabFourSectionOne);
 
