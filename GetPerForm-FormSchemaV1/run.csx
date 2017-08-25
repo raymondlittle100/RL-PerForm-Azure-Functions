@@ -136,8 +136,25 @@ tabTwoSectionTwo.columnLayout="twoColumn";
 tabTwoSectionTwo.collapsed= false;
 tabTwoSectionTwo.fieldCollection = fields;
 
+Section tabTwoSectionThree = new Section();
+tabTwoSectionThree.title="Section Three";
+tabTwoSectionThree.titleVisible= true;
+tabTwoSectionThree.columnLayout="twoColumn";
+tabTwoSectionThree.collapsed= false;
+tabTwoSectionThree.fieldCollection = fields;
+tabTwoSectionThree.visible = false;
+
+Section tabTwoSectionFour = new Section();
+tabTwoSectionFour.title="Section Four";
+tabTwoSectionFour.titleVisible= true;
+tabTwoSectionFour.columnLayout="twoColumn";
+tabTwoSectionFour.collapsed= false;
+tabTwoSectionFour.fieldCollection = fields;
+
 tabTwoSections.Add(tabTwoSectionOne);
 tabTwoSections.Add(tabTwoSectionTwo);
+tabTwoSections.Add(tabTwoSectionThree);
+tabTwoSections.Add(tabTwoSectionFour);
 
 #endregion
 
@@ -199,7 +216,7 @@ tabFourSections.Add(tabFourSectionOne);
   tabThree.title="Tab Three" ;
   tabThree.visible = true;
   tabThree.titleVisible = true;
-  tabThree.sectionCollection = tabTwoSections;
+  tabThree.sectionCollection = tabThreeSections;
 
   TabContentItem tabFour = new TabContentItem();
   tabFour.title="Tab Four" ;
