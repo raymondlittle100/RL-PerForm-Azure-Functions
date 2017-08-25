@@ -103,7 +103,7 @@ List<Section> tabOneSections = new List<Section>();
 Section tabOneSectionOne = new Section();
 tabOneSectionOne.title="Section One";
 tabOneSectionOne.titleVisible= true;
-tabOneSectionOne.columnLayout="twoColumn";
+tabOneSectionOne.columnLayout=2;
 tabOneSectionOne.collapsed= false;
 tabOneSectionOne.fieldCollection = fields;
 tabOneSectionOne.visible = true;
@@ -111,7 +111,7 @@ tabOneSectionOne.visible = true;
 Section tabOneSectionTwo = new Section();
 tabOneSectionTwo.title="Section Two";
 tabOneSectionTwo.titleVisible= true;
-tabOneSectionTwo.columnLayout="oneColumn";
+tabOneSectionTwo.columnLayout=1;
 tabOneSectionTwo.collapsed= false;
 tabOneSectionTwo.fieldCollection = fields;
 tabOneSectionTwo.visible = true;
@@ -127,7 +127,7 @@ List<Section> tabTwoSections = new List<Section>();
 Section tabTwoSectionOne = new Section();
 tabTwoSectionOne.title="Section One";
 tabTwoSectionOne.titleVisible= true;
-tabTwoSectionOne.columnLayout="threeColumn";
+tabTwoSectionOne.columnLayout=3;
 tabTwoSectionOne.collapsed= false;
 tabTwoSectionOne.fieldCollection = fields;
 tabTwoSectionOne.visible = true;
@@ -135,7 +135,7 @@ tabTwoSectionOne.visible = true;
 Section tabTwoSectionTwo = new Section();
 tabTwoSectionTwo.title="Section Two";
 tabTwoSectionTwo.titleVisible= true;
-tabTwoSectionTwo.columnLayout="twoColumn";
+tabTwoSectionTwo.columnLayout=4;
 tabTwoSectionTwo.collapsed= false;
 tabTwoSectionTwo.fieldCollection = fields;
 tabTwoSectionTwo.visible = true;
@@ -143,7 +143,7 @@ tabTwoSectionTwo.visible = true;
 Section tabTwoSectionThree = new Section();
 tabTwoSectionThree.title="Section Three";
 tabTwoSectionThree.titleVisible= true;
-tabTwoSectionThree.columnLayout="twoColumn";
+tabTwoSectionThree.columnLayout=2;
 tabTwoSectionThree.collapsed= false;
 tabTwoSectionThree.fieldCollection = fields;
 tabTwoSectionThree.visible = false;
@@ -151,7 +151,7 @@ tabTwoSectionThree.visible = false;
 Section tabTwoSectionFour = new Section();
 tabTwoSectionFour.title="Section Four";
 tabTwoSectionFour.titleVisible= true;
-tabTwoSectionFour.columnLayout="twoColumn";
+tabTwoSectionFour.columnLayout=1;
 tabTwoSectionFour.collapsed= false;
 tabTwoSectionFour.fieldCollection = fields;
 tabTwoSectionFour.visible = true;
@@ -169,7 +169,7 @@ List<Section> tabThreeSections = new List<Section>();
 Section tabThreeSectionOne = new Section();
 tabThreeSectionOne.title="Section One";
 tabThreeSectionOne.titleVisible= true;
-tabThreeSectionOne.columnLayout="threeColumn";
+tabThreeSectionOne.columnLayout=4;
 tabThreeSectionOne.collapsed= false;
 tabThreeSectionOne.fieldCollection = fields;
 tabThreeSectionOne.visible = true;
@@ -177,7 +177,7 @@ tabThreeSectionOne.visible = true;
 Section tabThreeSectionTwo = new Section();
 tabThreeSectionTwo.title="Section Two";
 tabThreeSectionTwo.titleVisible= true;
-tabThreeSectionTwo.columnLayout="twoColumn";
+tabThreeSectionTwo.columnLayout=1;
 tabThreeSectionTwo.collapsed= false;
 tabThreeSectionTwo.fieldCollection = fields;
 tabThreeSectionTwo.visible = true;
@@ -193,7 +193,7 @@ List<Section> tabFourSections = new List<Section>();
 Section tabFourSectionOne = new Section();
 tabFourSectionOne.title="Section One";
 tabFourSectionOne.titleVisible= true;
-tabFourSectionOne.columnLayout="threeColumn";
+tabFourSectionOne.columnLayout=3;
 tabFourSectionOne.collapsed= false;
 tabFourSectionOne.fieldCollection = fields;
 tabFourSectionOne.visible = true;
@@ -273,7 +273,7 @@ public class Section
   public string title { get; set; }
   public bool titleVisible { get; set; }
   public bool visible { get; set; }
-  public string columnLayout { get; set; }
+  public int columnLayout { get; set; }
   public bool collapsed { get; set; }
 
   public List<Field> fieldCollection { get; set; }
