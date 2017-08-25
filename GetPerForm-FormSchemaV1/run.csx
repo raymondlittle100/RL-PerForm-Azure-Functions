@@ -7,9 +7,11 @@ private static readonly string ADMIN_PASSWORD_CONFIG_KEY = "SharePointAdminPassw
 
 public static async Task<HttpResponseMessage> Run(HttpRequestMessage req, TraceWriter log)
 {
-    log.Info("C# HTTP trigger function processed a request.");
+    log.Info("GetPerForm-FormSchemaV1 processed a request.");
 
     var fieldJSON = GetJson();
+
+    log.Info("GetPerForm-FormSchemaV1 JSON is "+ fieldJSON);
 
     return req.CreateResponse(HttpStatusCode.OK,  fieldJSON);
 }
