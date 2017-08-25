@@ -97,27 +97,120 @@ public static string GetJson()
 
 #region Sections
 
-List<Section> sections = new List<Section>();
-Section sectionOne = new Section();
-sectionOne.title="Section One";
-sectionOne.titleVisible= true;
-sectionOne.columnLayout="twoColumn";
-sectionOne.collapsed= false;
-sectionOne.fieldCollection = fields;
+#region Tab One Sections
 
-sections.Add(sectionOne);
+List<Section> tabOneSections = new List<Section>();
+Section tabOneSectionOne = new Section();
+tabOneSectionOne.title="Section One";
+tabOneSectionOne.titleVisible= true;
+tabOneSectionOne.columnLayout="twoColumn";
+tabOneSectionOne.collapsed= false;
+tabOneSectionOne.fieldCollection = fields;
+
+Section tabOneSectionTwo = new Section();
+tabOneSectionTwo.title="Section Two";
+tabOneSectionTwo.titleVisible= true;
+tabOneSectionTwo.columnLayout="oneColumn";
+tabOneSectionTwo.collapsed= false;
+tabOneSectionTwo.fieldCollection = fields;
+
+tabOneSections.Add(tabOneSectionOne);
+tabOneSections.Add(tabOneSectionTwo);
+
+#endregion
+
+#region Tab Two Sections
+
+List<Section> tabTwoSections = new List<Section>();
+Section tabTwoSectionOne = new Section();
+tabTwoSectionOne.title="Section One";
+tabTwoSectionOne.titleVisible= true;
+tabTwoSectionOne.columnLayout="threeColumn";
+tabTwoSectionOne.collapsed= false;
+tabTwoSectionOne.fieldCollection = fields;
+
+Section tabTwoSectionTwo = new Section();
+tabTwoSectionTwo.title="Section Two";
+tabTwoSectionTwo.titleVisible= true;
+tabTwoSectionTwo.columnLayout="twoColumn";
+tabTwoSectionTwo.collapsed= false;
+tabTwoSectionTwo.fieldCollection = fields;
+
+tabTwoSections.Add(tabTwoSectionOne);
+tabTwoSections.Add(tabTwoSectionTwo);
+
+#endregion
+
+#region Tab Three Sections
+
+List<Section> tabThreeSections = new List<Section>();
+Section tabThreeSectionOne = new Section();
+tabThreeSectionOne.title="Section One";
+tabThreeSectionOne.titleVisible= true;
+tabThreeSectionOne.columnLayout="threeColumn";
+tabThreeSectionOne.collapsed= false;
+tabThreeSectionOne.fieldCollection = fields;
+
+Section tabThreeSectionTwo = new Section();
+tabThreeSectionTwo.title="Section Two";
+tabThreeSectionTwo.titleVisible= true;
+tabThreeSectionTwo.columnLayout="twoColumn";
+tabThreeSectionTwo.collapsed= false;
+tabThreeSectionTwo.fieldCollection = fields;
+
+tabThreeSections.Add(tabThreeSectionOne);
+tabThreeSections.Add(tabThreeSectionTwo);
+
+#endregion
+
+#region Tab Four Sections
+
+List<Section> tabFourSections = new List<Section>();
+Section tabFourSectionOne = new Section();
+tabFourSectionOne.title="Section One";
+tabFourSectionOne.titleVisible= true;
+tabFourSectionOne.columnLayout="threeColumn";
+tabFourSectionOne.collapsed= false;
+tabFourSectionOne.fieldCollection = fields;
+
+tabFourSections.Add(tabFourSectionOne);
+
+#endregion
 
 #endregion
 
 #region Tabs
 
   List<TabContentItem> contentTabs = new List<TabContentItem>();
+
   TabContentItem tabOne = new TabContentItem();
   tabOne.title="Tab One" ;
   tabOne.visible = true;
   tabOne.titleVisible = true;
-  tabOne.sectionCollection = sections;
+  tabOne.sectionCollection = tabOneSections;  
+
+  TabContentItem tabTwo = new TabContentItem();
+  tabTwo.title="Tab Two" ;
+  tabTwo.visible = false;
+  tabTwo.titleVisible = true;
+  tabTwo.sectionCollection = tabTwoSections;
+  
+  TabContentItem tabThree = new TabContentItem();
+  tabThree.title="Tab Three" ;
+  tabThree.visible = true;
+  tabThree.titleVisible = true;
+  tabThree.sectionCollection = tabTwoSections;
+
+  TabContentItem tabFour = new TabContentItem();
+  tabFour.title="Tab Four" ;
+  tabFour.visible = true;
+  tabFour.titleVisible = false;
+  tabFour.sectionCollection = tabFourSections;
+  
   contentTabs.Add(tabOne);
+  contentTabs.Add(tabTwo);
+  contentTabs.Add(tabThree);
+  contentTabs.Add(tabFour);
 
   Tabs tabs = new Tabs();
   tabs.flattenTabs = false;
