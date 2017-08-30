@@ -24,7 +24,7 @@ public static string GetJson()
 
     var fieldFour = new Field();
   fieldFour.type = "select";
-  fieldFour.content = "2";
+  fieldFour.hidden = false;
   fieldFour.dataMapping = "prefix";
   fieldFour.label = "Title";
   fieldFour.showLabel = false;
@@ -37,7 +37,7 @@ public static string GetJson()
 
   var fieldOne = new Field();
   fieldOne.type = "input";
-  fieldOne.content = "Raymond";
+  fieldOne.hidden = false;
   fieldOne.dataMapping = "FirstName";
   fieldOne.label = "First Name";
   fieldOne.showLabel = false;
@@ -50,7 +50,7 @@ public static string GetJson()
 
   var fieldFive = new Field();
   fieldFive.type = "input";
-  fieldFive.content = "william";
+  fieldFive.hidden = false;
   fieldFive.dataMapping = "MiddleName";
   fieldFive.label = "Middle Name";
   fieldFive.showLabel = false;
@@ -63,7 +63,7 @@ public static string GetJson()
    
   var fieldTwo = new Field();
   fieldTwo.type = "input";
-  fieldTwo.content = "Little";
+  fieldTwo.hidden = false;
   fieldTwo.dataMapping = "SecondName";
   fieldTwo.label = "Second Name";
   fieldTwo.showLabel = false;
@@ -75,8 +75,8 @@ public static string GetJson()
   fieldTwo.maxLength = 50;
    
   var fieldThree = new Field();
-  fieldThree.type = "input";
-  fieldThree.content = "11/08/1982";
+  fieldThree.type = "date";
+  fieldThree.hidden = false;
   fieldThree.dataMapping = "DoB";
   fieldThree.label = "Date of Birth";
   fieldThree.showLabel = false;
@@ -87,11 +87,52 @@ public static string GetJson()
   fieldThree.cssClass = "dob";
   fieldThree.maxLength = 50;
 
+  var fieldSix = new Field();
+  fieldSix.type = "email";
+  fieldSix.hidden = false;
+  fieldSix.dataMapping = "email";
+  fieldSix.label = "Email Address";
+  fieldSix.showLabel = true;
+  fieldSix.required = true;
+  fieldSix.readOnly = false;
+  fieldSix.showDescription = false;
+  fieldSix.description = "Please supply your email address";
+  fieldSix.cssClass = "email";  
+
+  var fieldSeven = new Field();
+  fieldSeven.type = "multiline";
+  fieldSeven.hidden = false;
+  fieldSeven.dataMapping = "TaskOneComments";
+  fieldSeven.label = "Comments";
+  fieldSeven.showLabel = true;
+  fieldSeven.required = true;
+  fieldSeven.readOnly = false;
+  fieldSeven.showDescription = false;
+  fieldSeven.description = "Please supply your comments";
+  fieldSeven.cssClass = "comments";
+  fieldSeven.maxLength = 300;
+
+  var fieldEight = new Field();
+  fieldEight.type = "input";
+  fieldEight.hidden = true;
+  fieldEight.dataMapping = "HiddenTest";
+  fieldEight.label = "Hidden Test";
+  fieldEight.showLabel = false;
+  fieldEight.required = true;
+  fieldEight.readOnly = true;
+  fieldEight.showDescription = false;
+  fieldEight.description = "should be hidden";
+  fieldEight.cssClass = "hidden";
+  fieldEight.maxLength = 50;
+
     fields.Add(fieldOne);
     fields.Add(fieldTwo);
     fields.Add(fieldThree);
     fields.Add(fieldFour);
     fields.Add(fieldFive);
+    fields.Add(fieldSix);
+    fields.Add(fieldSeven);
+    fields.Add(fieldEight);    
 
 #endregion
 
@@ -102,19 +143,19 @@ public static string GetJson()
 List<Section> tabOneSections = new List<Section>();
 Section tabOneSectionOne = new Section();
 tabOneSectionOne.title="Section One";
-tabOneSectionOne.titleVisible= true;
+tabOneSectionOne.titleHidden= false;
 tabOneSectionOne.columnLayout=2;
 tabOneSectionOne.collapsed= false;
 tabOneSectionOne.fieldCollection = fields;
-tabOneSectionOne.visible = true;
+tabOneSectionOne.hidden = false;
 
 Section tabOneSectionTwo = new Section();
 tabOneSectionTwo.title="Section Two";
-tabOneSectionTwo.titleVisible= true;
+tabOneSectionTwo.titleHidden= false;
 tabOneSectionTwo.columnLayout=1;
 tabOneSectionTwo.collapsed= false;
 tabOneSectionTwo.fieldCollection = fields;
-tabOneSectionTwo.visible = true;
+tabOneSectionTwo.hidden = false;
 
 tabOneSections.Add(tabOneSectionOne);
 tabOneSections.Add(tabOneSectionTwo);
@@ -126,35 +167,35 @@ tabOneSections.Add(tabOneSectionTwo);
 List<Section> tabTwoSections = new List<Section>();
 Section tabTwoSectionOne = new Section();
 tabTwoSectionOne.title="Section One";
-tabTwoSectionOne.titleVisible= true;
+tabTwoSectionOne.titleHidden= false;
 tabTwoSectionOne.columnLayout=3;
 tabTwoSectionOne.collapsed= false;
 tabTwoSectionOne.fieldCollection = fields;
-tabTwoSectionOne.visible = true;
+tabTwoSectionOne.hidden = false;
 
 Section tabTwoSectionTwo = new Section();
 tabTwoSectionTwo.title="Section Two";
-tabTwoSectionTwo.titleVisible= true;
+tabTwoSectionTwo.titleHidden= false;
 tabTwoSectionTwo.columnLayout=4;
 tabTwoSectionTwo.collapsed= false;
 tabTwoSectionTwo.fieldCollection = fields;
-tabTwoSectionTwo.visible = true;
+tabTwoSectionTwo.hidden = false;
 
 Section tabTwoSectionThree = new Section();
 tabTwoSectionThree.title="Section Three";
-tabTwoSectionThree.titleVisible= true;
+tabTwoSectionThree.titleHidden= false;
 tabTwoSectionThree.columnLayout=2;
 tabTwoSectionThree.collapsed= false;
 tabTwoSectionThree.fieldCollection = fields;
-tabTwoSectionThree.visible = false;
+tabTwoSectionThree.hidden = true;
 
 Section tabTwoSectionFour = new Section();
 tabTwoSectionFour.title="Section Four";
-tabTwoSectionFour.titleVisible= true;
+tabTwoSectionFour.titleHidden= false;
 tabTwoSectionFour.columnLayout=1;
 tabTwoSectionFour.collapsed= false;
 tabTwoSectionFour.fieldCollection = fields;
-tabTwoSectionFour.visible = true;
+tabTwoSectionFour.hidden = false;
 
 tabTwoSections.Add(tabTwoSectionOne);
 tabTwoSections.Add(tabTwoSectionTwo);
@@ -168,19 +209,19 @@ tabTwoSections.Add(tabTwoSectionFour);
 List<Section> tabThreeSections = new List<Section>();
 Section tabThreeSectionOne = new Section();
 tabThreeSectionOne.title="Section One";
-tabThreeSectionOne.titleVisible= true;
+tabThreeSectionOne.titleHidden= false;
 tabThreeSectionOne.columnLayout=4;
 tabThreeSectionOne.collapsed= false;
 tabThreeSectionOne.fieldCollection = fields;
-tabThreeSectionOne.visible = true;
+tabThreeSectionOne.hidden = false;
 
 Section tabThreeSectionTwo = new Section();
 tabThreeSectionTwo.title="Section Two";
-tabThreeSectionTwo.titleVisible= true;
+tabThreeSectionTwo.titleHidden= false;
 tabThreeSectionTwo.columnLayout=1;
 tabThreeSectionTwo.collapsed= false;
 tabThreeSectionTwo.fieldCollection = fields;
-tabThreeSectionTwo.visible = true;
+tabThreeSectionTwo.hidden = false;
 
 tabThreeSections.Add(tabThreeSectionOne);
 tabThreeSections.Add(tabThreeSectionTwo);
@@ -192,11 +233,11 @@ tabThreeSections.Add(tabThreeSectionTwo);
 List<Section> tabFourSections = new List<Section>();
 Section tabFourSectionOne = new Section();
 tabFourSectionOne.title="Section One";
-tabFourSectionOne.titleVisible= true;
+tabFourSectionOne.titleHidden= false;
 tabFourSectionOne.columnLayout=3;
 tabFourSectionOne.collapsed= false;
 tabFourSectionOne.fieldCollection = fields;
-tabFourSectionOne.visible = true;
+tabFourSectionOne.hidden = false;
 
 tabFourSections.Add(tabFourSectionOne);
 
@@ -210,26 +251,26 @@ tabFourSections.Add(tabFourSectionOne);
 
   TabContentItem tabOne = new TabContentItem();
   tabOne.title="Tab One" ;
-  tabOne.visible = true;
-  tabOne.titleVisible = true;
+  tabOne.hidden = false;
+  tabOne.titleHidden = false;
   tabOne.sectionCollection = tabOneSections;  
 
   TabContentItem tabTwo = new TabContentItem();
   tabTwo.title="Tab Two" ;
-  tabTwo.visible = false;
-  tabTwo.titleVisible = true;
+  tabTwo.hidden = true;
+  tabTwo.titleHidden = false;
   tabTwo.sectionCollection = tabTwoSections;
   
   TabContentItem tabThree = new TabContentItem();
   tabThree.title="Tab Three" ;
-  tabThree.visible = true;
-  tabThree.titleVisible = true;
+  tabThree.hidden = false;
+  tabThree.titleHidden = false;
   tabThree.sectionCollection = tabThreeSections;
 
   TabContentItem tabFour = new TabContentItem();
   tabFour.title="Tab Four" ;
-  tabFour.visible = true;
-  tabFour.titleVisible = false;
+  tabFour.hidden = false;
+  tabFour.titleHidden = true;
   tabFour.sectionCollection = tabFourSections;
   
   contentTabs.Add(tabOne);
@@ -255,7 +296,7 @@ tabFourSections.Add(tabFourSectionOne);
 public class Field 
 {
   public string type { get; set; }
-  public string content { get; set; }
+  public bool hidden { get; set; }
   public string dataMapping { get; set; }
   public string label { get; set; }
   public bool showLabel { get; set; }
@@ -271,8 +312,8 @@ public class Field
 public class Section 
 {
   public string title { get; set; }
-  public bool titleVisible { get; set; }
-  public bool visible { get; set; }
+  public bool titleHidden { get; set; }
+  public bool hidden { get; set; }
   public int columnLayout { get; set; }
   public bool collapsed { get; set; }
 
@@ -282,8 +323,8 @@ public class Section
 public class TabContentItem 
 {
   public string title { get; set; }
-  public bool titleVisible { get; set; }
-  public bool visible { get; set; }
+  public bool titleHidden { get; set; }
+  public bool hidden { get; set; }
 
   public List<Section> sectionCollection { get; set; }
 }
