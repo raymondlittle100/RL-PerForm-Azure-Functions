@@ -279,7 +279,7 @@ tabFourSections.Add(tabFourSectionOne);
   contentTabs.Add(tabFour);
 
   Tabs tabs = new Tabs();
-  tabs.flattenTabs = false;
+  tabs.flattenTabs = true;
   tabs.tabDetails = contentTabs;
 
   #endregion
