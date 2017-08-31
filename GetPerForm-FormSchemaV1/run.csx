@@ -18,6 +18,7 @@ public static async Task<HttpResponseMessage> Run(HttpRequestMessage req, TraceW
 
 public static string GetJson() 
 {
+
   #region Fields
 
   List<Field> fields = new List<Field>();
@@ -125,6 +126,32 @@ public static string GetJson()
   fieldEight.cssClass = "hidden";
   fieldEight.maxLength = 50;
 
+   var fieldNine = new Field();
+  fieldNine.type = "input";
+  fieldNine.hidden = false;
+  fieldNine.dataMapping = "Brand";
+  fieldNine.label = "Brand";
+  fieldNine.showLabel = true;
+  fieldNine.required = true;
+  fieldNine.readOnly = false;
+  fieldNine.showDescription = true;
+  fieldNine.description = "Please set the brand";
+  fieldNine.cssClass = "brand";
+  fieldNine.maxLength = 100;
+
+  var fieldTen = new Field();
+  fieldTen.type = "false";
+  fieldTen.hidden = true;
+  fieldTen.dataMapping = "Market";
+  fieldTen.label = "Market";
+  fieldTen.showLabel = true;
+  fieldTen.required = true;
+  fieldTen.readOnly = false;
+  fieldTen.showDescription = true;
+  fieldTen.description = "Please set market";
+  fieldTen.cssClass = "market";
+  fieldTen.maxLength = 100;
+
     fields.Add(fieldOne);
     fields.Add(fieldTwo);
     fields.Add(fieldThree);
@@ -133,6 +160,8 @@ public static string GetJson()
     fields.Add(fieldSix);
     fields.Add(fieldSeven);
     fields.Add(fieldEight);    
+    fields.Add(fieldNine);  
+    fields.Add(fieldTen);  
 
 #endregion
 
