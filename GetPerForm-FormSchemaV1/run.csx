@@ -141,7 +141,7 @@ public static string GetJson()
 
   var fieldTen = new Field();
   fieldTen.type = "false";
-  fieldTen.hidden = true;
+  fieldTen.hidden = false;
   fieldTen.dataMapping = "Market";
   fieldTen.label = "Market";
   fieldTen.showLabel = true;
