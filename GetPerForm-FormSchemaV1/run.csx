@@ -140,9 +140,9 @@ public static string GetJson()
   fieldNine.maxLength = 100;
 
   var fieldTen = new Field();
-  fieldTen.type = "false";
+  fieldTen.type = "input";
   fieldTen.hidden = false;
-  fieldTen.dataMapping = "Market";
+  fieldTen.dataMapping = "Markets";
   fieldTen.label = "Market";
   fieldTen.showLabel = true;
   fieldTen.required = true;
