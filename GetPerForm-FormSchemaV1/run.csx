@@ -172,6 +172,7 @@ public static string GetJson()
 List<Section> tabOneSections = new List<Section>();
 Section tabOneSectionOne = new Section();
 tabOneSectionOne.title="Section One";
+tabOneSectionOne.internalName="sectionOne";
 tabOneSectionOne.titleHidden= false;
 tabOneSectionOne.columnLayout=2;
 tabOneSectionOne.collapsed= false;
@@ -180,6 +181,7 @@ tabOneSectionOne.hidden = false;
 
 Section tabOneSectionTwo = new Section();
 tabOneSectionTwo.title="Section Two";
+tabOneSectionTwo.internalName="sectionTwo";
 tabOneSectionTwo.titleHidden= false;
 tabOneSectionTwo.columnLayout=1;
 tabOneSectionTwo.collapsed= false;
@@ -196,6 +198,7 @@ tabOneSections.Add(tabOneSectionTwo);
 List<Section> tabTwoSections = new List<Section>();
 Section tabTwoSectionOne = new Section();
 tabTwoSectionOne.title="Section One";
+tabTwoSectionOne.internalName="sectionOne";
 tabTwoSectionOne.titleHidden= false;
 tabTwoSectionOne.columnLayout=3;
 tabTwoSectionOne.collapsed= false;
@@ -204,6 +207,7 @@ tabTwoSectionOne.hidden = false;
 
 Section tabTwoSectionTwo = new Section();
 tabTwoSectionTwo.title="Section Two";
+tabTwoSectionTwo.internalName="sectionTwo";
 tabTwoSectionTwo.titleHidden= false;
 tabTwoSectionTwo.columnLayout=4;
 tabTwoSectionTwo.collapsed= false;
@@ -212,6 +216,7 @@ tabTwoSectionTwo.hidden = false;
 
 Section tabTwoSectionThree = new Section();
 tabTwoSectionThree.title="Section Three";
+tabTwoSectionThree.internalName="sectionThree";
 tabTwoSectionThree.titleHidden= false;
 tabTwoSectionThree.columnLayout=2;
 tabTwoSectionThree.collapsed= false;
@@ -220,6 +225,7 @@ tabTwoSectionThree.hidden = true;
 
 Section tabTwoSectionFour = new Section();
 tabTwoSectionFour.title="Section Four";
+tabTwoSectionFour.internalName="sectionFour";
 tabTwoSectionFour.titleHidden= false;
 tabTwoSectionFour.columnLayout=1;
 tabTwoSectionFour.collapsed= false;
@@ -238,6 +244,7 @@ tabTwoSections.Add(tabTwoSectionFour);
 List<Section> tabThreeSections = new List<Section>();
 Section tabThreeSectionOne = new Section();
 tabThreeSectionOne.title="Section One";
+tabThreeSectionOne.internalName="sectionOne";
 tabThreeSectionOne.titleHidden= false;
 tabThreeSectionOne.columnLayout=4;
 tabThreeSectionOne.collapsed= false;
@@ -246,6 +253,7 @@ tabThreeSectionOne.hidden = false;
 
 Section tabThreeSectionTwo = new Section();
 tabThreeSectionTwo.title="Section Two";
+tabThreeSectionTwo.internalName="sectionTwo";
 tabThreeSectionTwo.titleHidden= false;
 tabThreeSectionTwo.columnLayout=1;
 tabThreeSectionTwo.collapsed= false;
@@ -262,6 +270,7 @@ tabThreeSections.Add(tabThreeSectionTwo);
 List<Section> tabFourSections = new List<Section>();
 Section tabFourSectionOne = new Section();
 tabFourSectionOne.title="Section One";
+tabFourSectionOne.internalName="sectionOne";
 tabFourSectionOne.titleHidden= false;
 tabFourSectionOne.columnLayout=3;
 tabFourSectionOne.collapsed= false;
@@ -342,6 +351,7 @@ public class Section
 {
   public string title { get; set; }
   public bool titleHidden { get; set; }
+  public string internalName { get; set; }
   public bool hidden { get; set; }
   public int columnLayout { get; set; }
   public bool collapsed { get; set; }
@@ -351,8 +361,9 @@ public class Section
 
 public class TabContentItem 
 {
-  public string title { get; set; }
+  public string title { get; set; }  
   public bool titleHidden { get; set; }
+  public string internalName { get; set; }
   public bool hidden { get; set; }
 
   public List<Section> sectionCollection { get; set; }
