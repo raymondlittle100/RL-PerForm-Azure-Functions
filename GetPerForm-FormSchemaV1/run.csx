@@ -289,24 +289,28 @@ tabFourSections.Add(tabFourSectionOne);
 
   TabContentItem tabOne = new TabContentItem();
   tabOne.title="Tab One" ;
+  tabOne.internalName="tabOne";
   tabOne.hidden = false;
   tabOne.titleHidden = false;
   tabOne.sectionCollection = tabOneSections;  
 
   TabContentItem tabTwo = new TabContentItem();
   tabTwo.title="Tab Two" ;
+  tabTwo.internalName="tabTwo";
   tabTwo.hidden = true;
   tabTwo.titleHidden = false;
   tabTwo.sectionCollection = tabTwoSections;
   
   TabContentItem tabThree = new TabContentItem();
   tabThree.title="Tab Three" ;
+  tabThree.internalName="tabThree";
   tabThree.hidden = false;
   tabThree.titleHidden = false;
   tabThree.sectionCollection = tabThreeSections;
 
   TabContentItem tabFour = new TabContentItem();
   tabFour.title="Tab Four" ;
+  tabFour.internalName="tabFour";
   tabFour.hidden = false;
   tabFour.titleHidden = true;
   tabFour.sectionCollection = tabFourSections;
