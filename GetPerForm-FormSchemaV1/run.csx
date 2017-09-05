@@ -41,7 +41,7 @@ public static string GetJson()
   fieldOne.hidden = false;
   fieldOne.dataMapping = "FirstName";
   fieldOne.label = "First Name";
-  fieldOne.showLabel = false;
+  fieldOne.showLabel = true;
   fieldOne.required = true;
   fieldOne.readOnly = true;
   fieldOne.showDescription = false;
@@ -54,7 +54,7 @@ public static string GetJson()
   fieldFive.hidden = false;
   fieldFive.dataMapping = "MiddleName";
   fieldFive.label = "Middle Name";
-  fieldFive.showLabel = false;
+  fieldFive.showLabel = true;
   fieldFive.required = false;
   fieldFive.readOnly = true;
   fieldFive.showDescription = false;
@@ -67,7 +67,7 @@ public static string GetJson()
   fieldTwo.hidden = false;
   fieldTwo.dataMapping = "SecondName";
   fieldTwo.label = "Second Name";
-  fieldTwo.showLabel = false;
+  fieldTwo.showLabel = true;
   fieldTwo.required = true;
   fieldTwo.readOnly = true;
   fieldTwo.showDescription = false;
@@ -80,7 +80,7 @@ public static string GetJson()
   fieldThree.hidden = false;
   fieldThree.dataMapping = "DoB";
   fieldThree.label = "Date of Birth";
-  fieldThree.showLabel = false;
+  fieldThree.showLabel = true;
   fieldThree.required = true;
   fieldThree.readOnly = true;
   fieldThree.showDescription = false;
