@@ -55,7 +55,7 @@ public static string GetJson()
   fieldFive.dataMapping = "MiddleName";
   fieldFive.label = "Middle Name";
   fieldFive.showLabel = false;
-  fieldFive.required = true;
+  fieldFive.required = false;
   fieldFive.readOnly = true;
   fieldFive.showDescription = false;
   fieldFive.description = "Please supply your middle name";
