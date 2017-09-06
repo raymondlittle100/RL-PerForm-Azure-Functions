@@ -152,6 +152,19 @@ public static string GetJson()
   fieldTen.cssClass = "market";
   fieldTen.maxLength = 100;
 
+   var fieldEleven  = new Field();
+  fieldTen.type = "input";
+  fieldTen.hidden = false;
+  fieldTen.dataMapping = "TomTest";
+  fieldTen.label = "Tom Test";
+  fieldTen.showLabel = true;
+  fieldTen.required = true;
+  fieldTen.readOnly = false;
+  fieldTen.showDescription = true;
+  fieldTen.description = "Please set Tom Test";
+  fieldTen.cssClass = "TomTest";
+  fieldTen.maxLength = 100;
+
     fields.Add(fieldOne);
     fields.Add(fieldTwo);
     fields.Add(fieldThree);
@@ -162,6 +175,8 @@ public static string GetJson()
     fields.Add(fieldEight);    
     fields.Add(fieldNine);  
     fields.Add(fieldTen);  
+    fields.Add(fieldEleven); 
+    
 
 #endregion
 
