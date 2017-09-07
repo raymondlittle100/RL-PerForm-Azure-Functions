@@ -1,4 +1,4 @@
-public class Field 
+public  class Field 
 {
   public string type { get; set; }
   public bool hidden { get; set; }
