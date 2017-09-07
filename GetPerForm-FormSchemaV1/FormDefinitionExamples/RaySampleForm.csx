@@ -1,12 +1,12 @@
-#load "..\FormDefintionOverview\FieldDetails.csx"
-#load "..\FormDefintionOverview\Section.csx"
-#load "..\FormDefintionOverview\TabContent.csx"
-#load "..\FormDefintionOverview\TabContentItem.csx"
-#load "..\FormDefintionOverview\Tabs.csx"
-#load "..\FormDefintionOverview\TabActionItem.csx"
-#load "..\FormDefintionOverview\TabAction.csx"
-#load "..\FormDefintionOverview\TabActions.csx"
-#load "..\FormDefintionOverview\FormDefintionOverview.csx"
+#load "..\FormDefinitionClasses\FieldDetails.csx"
+#load "..\FormDefinitionClasses\Section.csx"
+#load "..\FormDefinitionClasses\TabContent.csx"
+#load "..\FormDefinitionClasses\TabContentItem.csx"
+#load "..\FormDefinitionClasses\Tabs.csx"
+#load "..\FormDefinitionClasses\TabActionItem.csx"
+#load "..\FormDefinitionClasses\TabAction.csx"
+#load "..\FormDefinitionClasses\TabActions.csx"
+#load "..\FormDefinitionClasses\FormDefintionOverview.csx"
 
 using Newtonsoft.Json;
 using FieldDetails;

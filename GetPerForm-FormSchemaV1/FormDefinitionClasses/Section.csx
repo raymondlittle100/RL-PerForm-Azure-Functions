@@ -1,4 +1,4 @@
-#load "..\FormDefintionOverview\FieldDetails.csx"
+#load "FieldDetails.csx"
 
 public class Section 
 {

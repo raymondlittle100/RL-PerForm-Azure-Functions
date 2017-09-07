@@ -1,4 +1,4 @@
-#load "..\FormDefintionOverview\TabActionItem.csx"
+#load "TabActionItem.csx"
 
 public class TabAction
 {  

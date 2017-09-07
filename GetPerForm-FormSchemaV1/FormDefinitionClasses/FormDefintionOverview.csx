@@ -1,5 +1,5 @@
-#load "..\FormDefintionOverview\TabActions.csx"
-#load "..\FormDefintionOverview\Tabs.csx"
+#load "TabActions.csx"
+#load "Tabs.csx"
 
 public class FormDefintionOverview 
 {

@@ -1,4 +1,4 @@
-#load "..\FormDefintionOverview\Section.csx"
+#load "Section.csx"
 
 public class TabContentItem 
 {
