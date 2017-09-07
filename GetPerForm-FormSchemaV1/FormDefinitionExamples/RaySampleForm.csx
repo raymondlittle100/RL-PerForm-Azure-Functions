@@ -1,4 +1,3 @@
-using Newtonsoft.Json;
 #load "..\FormDefintionOverview\FieldDetails.csx"
 #load "..\FormDefintionOverview\Section.csx"
 #load "..\FormDefintionOverview\TabContent.csx"
@@ -9,6 +8,7 @@ using Newtonsoft.Json;
 #load "..\FormDefintionOverview\TabActions.csx"
 #load "..\FormDefintionOverview\FormDefintionOverview.csx"
 
+using Newtonsoft.Json;
 using FieldDetails;
 using TabActions;
 

@@ -1,4 +1,3 @@
-using Newtonsoft.Json;
 #load "..\FormDefintionOverview\FieldDetails.csx"
 #load "..\FormDefintionOverview\Section.csx"
 #load "..\FormDefintionOverview\TabContent.csx"
@@ -8,6 +7,8 @@ using Newtonsoft.Json;
 #load "..\FormDefintionOverview\TabAction.csx"
 #load "..\FormDefintionOverview\TabActions.csx"
 #load "..\FormDefintionOverview\FormDefintionOverview.csx"
+
+using Newtonsoft.Json;
 
 public class RaySampleForm 
 {

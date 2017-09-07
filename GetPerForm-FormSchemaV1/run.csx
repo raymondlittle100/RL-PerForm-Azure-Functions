@@ -1,13 +1,4 @@
 #load "FormDefinitionExamples\RaySampleForm.csx"
-#load "..\FormDefintionOverview\FieldDetails.csx"
-#load "..\FormDefintionOverview\Section.csx"
-#load "..\FormDefintionOverview\TabContent.csx"
-#load "..\FormDefintionOverview\TabContentItem.csx"
-#load "..\FormDefintionOverview\Tabs.csx"
-#load "..\FormDefintionOverview\TabActionItem.csx"
-#load "..\FormDefintionOverview\TabAction.csx"
-#load "..\FormDefintionOverview\TabActions.csx"
-#load "..\FormDefintionOverview\FormDefintionOverview.csx"
 
 using System;
 using System.Net;
