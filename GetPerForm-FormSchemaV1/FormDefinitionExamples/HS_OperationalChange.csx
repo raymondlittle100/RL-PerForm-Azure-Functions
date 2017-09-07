@@ -210,7 +210,7 @@ public class HS_OperationalChange
     fieldFourteen.cssClass = "coveringCost";        
 
     tabOneSectionTwoFields.Add(fieldSeven);
-    tabOneSectionTwoFields.Add(fieldEigth);
+    tabOneSectionTwoFields.Add(fieldEight);
     tabOneSectionTwoFields.Add(fieldNine);
     tabOneSectionTwoFields.Add(fieldTen);
     tabOneSectionTwoFields.Add(fieldEleven);
