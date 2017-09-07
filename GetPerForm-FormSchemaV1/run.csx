@@ -153,17 +153,17 @@ public static string GetJson()
   fieldTen.maxLength = 100;
 
    var fieldEleven  = new Field();
-  fieldTen.type = "input";
-  fieldTen.hidden = false;
-  fieldTen.dataMapping = "TomTest";
-  fieldTen.label = "Tom Test";
-  fieldTen.showLabel = true;
-  fieldTen.required = true;
-  fieldTen.readOnly = false;
-  fieldTen.showDescription = true;
-  fieldTen.description = "Please set Tom Test";
-  fieldTen.cssClass = "TomTest";
-  fieldTen.maxLength = 100;
+  fieldEleven.type = "input";
+  fieldEleven.hidden = false;
+  fieldEleven.dataMapping = "TomTest";
+  fieldEleven.label = "Tom Test";
+  fieldEleven.showLabel = true;
+  fieldEleven.required = true;
+  fieldEleven.readOnly = false;
+  fieldEleven.showDescription = true;
+  fieldEleven.description = "Please set Tom Test";
+  fieldEleven.cssClass = "TomTest";
+  fieldEleven.maxLength = 100;
 
     fields.Add(fieldOne);
     fields.Add(fieldTwo);
@@ -365,7 +365,7 @@ tabConfirmAction.triggerSave=true;
 tabConfirmAction.clickCall="";
 tabConfirmAction.clickCallMode="sync";
 tabConfirmAction.allTabs = false;
-tabConfirmAction.tabActionItems = tabActionItems;
+tabConfirmAction.tabReference = tabActionItems;
 
 TabAction tabSaveAction = new TabAction();
 tabSaveAction.title = "Save";
@@ -389,7 +389,7 @@ tabActionsList.Add(tabCancelAction);
 tabActionsList.Add(tabConfirmAction);
 
 TabActions tabActions = new TabActions();
-tabActions.tabActions = tabActionsList;
+tabActions.actions = tabActionsList;
 
 #endregion
 
@@ -456,7 +456,7 @@ public class Tabs
 
 public class TabActions 
 {
-  public List<TabAction> tabActions { get; set; }  
+  public List<TabAction> actions { get; set; }  
 }
 
 public class TabAction
@@ -468,7 +468,7 @@ public class TabAction
   public string clickCall { get; set; }
   public string clickCallMode { get; set; }
   public bool allTabs { get; set; }
-  public List<TabActionItem> tabActionItems { get; set; }  
+  public List<TabActionItem> tabReference { get; set; }  
 }
 
 public class TabActionItem
