@@ -12,12 +12,15 @@ public static async Task<HttpResponseMessage> Run(HttpRequestMessage req, TraceW
 {
     log.Info("GetPerForm-FormSchemaV1 processed a request.");
 
+    RaySampleForm formTwo = new RaySampleForm();
+    var formTwoFieldJSON = formTwo.GetFormJson();
+
     HS_OperationalChange formOne = new HS_OperationalChange();
-    var fieldJSON =formOne.GetFormJson();    
+    var formOneFieldJSON =formOne.GetFormJson();    
 
-    log.Info("GetPerForm-FormSchemaV1 JSON is "+ fieldJSON);
+    log.Info("GetPerForm-FormSchemaV1 JSON is "+ formOneFieldJSON);
 
-    return req.CreateResponse(HttpStatusCode.OK,  fieldJSON);
+    return req.CreateResponse(HttpStatusCode.OK,  formOneFieldJSON);
 }
 
 
