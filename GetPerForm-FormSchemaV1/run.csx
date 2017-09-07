@@ -346,13 +346,13 @@ tabFourSections.Add(tabFourSectionOne);
 List<TabActionItem> tabActionItems = new List<TabActionItem>();
 
 TabActionItem tabTwoAction = new TabActionItem();
-tabTwoAction.internalName = "tabTwo";
+tabTwoAction.tabInternalName = "tabTwo";
 
 TabActionItem tabThreeAction = new TabActionItem();
-tabThreeAction.internalName = "tabThree";
+tabThreeAction.tabInternalName = "tabThree";
 
 TabActionItem tabFourAction = new TabActionItem();
-tabFourAction.internalName = "tabFour";
+tabFourAction.tabInternalName = "tabFour";
 
 tabActionItems.Add(tabTwoAction);
 tabActionItems.Add(tabThreeAction);
@@ -473,7 +473,7 @@ public class TabAction
 
 public class TabActionItem
 {  
-  public string internalName { get; set; }
+  public string tabInternalName { get; set; }
 }
 
 public class FormDefintionOverview 
