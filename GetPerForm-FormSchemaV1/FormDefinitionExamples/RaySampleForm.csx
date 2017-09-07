@@ -9,8 +9,6 @@
 #load "..\FormDefinitionClasses\FormDefintionOverview.csx"
 
 using Newtonsoft.Json;
-using FieldDetails;
-using TabActions;
 
 public class RaySampleForm 
 {
