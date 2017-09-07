@@ -1,3 +1,5 @@
+#load "..\FormDefintionOverview\FieldDetails.csx"
+
 public class Section 
 {
   public string title { get; set; }

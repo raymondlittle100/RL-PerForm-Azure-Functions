@@ -1,3 +1,6 @@
+#load "..\FormDefintionOverview\TabActions.csx"
+#load "..\FormDefintionOverview\Tabs.csx"
+
 public class FormDefintionOverview 
 {
   public string internalName { get; set; }
