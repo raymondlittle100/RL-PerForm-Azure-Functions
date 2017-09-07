@@ -1,4 +1,5 @@
 #load "FormDefinitionExamples\RaySampleForm.csx"
+#load "FormDefinitionExamples\HS_OperationalChange.csx"
 
 using System;
 using System.Net;
@@ -11,7 +12,7 @@ public static async Task<HttpResponseMessage> Run(HttpRequestMessage req, TraceW
 {
     log.Info("GetPerForm-FormSchemaV1 processed a request.");
 
-    RaySampleForm formOne = new RaySampleForm();
+    HS_OperationalChange formOne = new HS_OperationalChange();
     var fieldJSON =formOne.GetFormJson();    
 
     log.Info("GetPerForm-FormSchemaV1 JSON is "+ fieldJSON);

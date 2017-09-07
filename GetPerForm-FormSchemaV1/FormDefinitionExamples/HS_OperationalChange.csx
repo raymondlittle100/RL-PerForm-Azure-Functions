@@ -10,9 +10,9 @@
 
 using Newtonsoft.Json;
 
-public class RaySampleForm 
+public class HS_OperationalChange 
 {
-    public RaySampleForm()
+    public HS_OperationalChange()
     {
 
     }
