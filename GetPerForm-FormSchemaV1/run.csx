@@ -341,11 +341,64 @@ tabFourSections.Add(tabFourSectionOne);
 
   #endregion
 
+  #region Tab Actions
+
+List<TabActionItem> tabActionItems = new List<TabActionItem>();
+
+TabActionItem tabTwoAction = new TabActionItem();
+tabTwoAction.internalName = "tabTwo";
+
+TabActionItem tabThreeAction = new TabActionItem();
+tabThreeAction.internalName = "tabThree";
+
+TabActionItem tabFourAction = new TabActionItem();
+tabFourAction.internalName = "tabFour";
+
+tabActionItems.Add(tabTwoAction);
+tabActionItems.Add(tabThreeAction);
+tabActionItems.Add(tabFourAction);
+
+TabAction tabConfirmAction = new TabAction();
+tabConfirmAction.title = "Confirm";
+tabConfirmAction.validation="";
+tabConfirmAction.triggerSave=true;
+tabConfirmAction.clickCall="";
+tabConfirmAction.clickCallMode="sync";
+tabConfirmAction.allTabs = false;
+tabConfirmAction.tabActionItems = tabActionItems;
+
+TabAction tabSaveAction = new TabAction();
+tabSaveAction.title = "Save";
+tabSaveAction.validation="";
+tabSaveAction.triggerSave=true;
+tabSaveAction.clickCall="";
+tabSaveAction.clickCallMode="sync";
+tabSaveAction.allTabs = true;
+
+TabAction tabCancelAction = new TabAction();
+tabCancelAction.title = "Cancel";
+tabCancelAction.validation="";
+tabCancelAction.triggerSave=false;
+tabCancelAction.clickCall="";
+tabCancelAction.clickCallMode="sync";
+tabCancelAction.allTabs = true;
+
+List<TabAction> tabActionsList = new List<TabAction>();
+tabActionsList.Add(tabSaveAction);
+tabActionsList.Add(tabCancelAction);
+tabActionsList.Add(tabConfirmAction);
+
+TabActions tabActions = new TabActions();
+tabActions.tabActions = tabActionsList;
+
+#endregion
+
   FormDefintionOverview fd = new  FormDefintionOverview();
   fd.client = "Test Client";
   fd.internalName="field_internal_name";
   fd.name="field name";
   fd.tabs = tabs;
+  fd.tabActions = tabActions;
     
   return JsonConvert.SerializeObject(fd);
 }
@@ -398,10 +451,36 @@ public class Tabs
   public List<TabContentItem> tabDetails { get; set; }
   public bool flattenTabs { get; set; }
 }
+
+
+
+public class TabActions 
+{
+  public List<TabAction> tabActions { get; set; }  
+}
+
+public class TabAction
+{  
+  public string title { get; set; }
+  public string validation { get; set; }
+
+  public bool triggerSave { get; set; }
+  public string clickCall { get; set; }
+  public string clickCallMode { get; set; }
+  public bool allTabs { get; set; }
+  public List<TabActionItem> tabActionItems { get; set; }  
+}
+
+public class TabActionItem
+{  
+  public string internalName { get; set; }
+}
+
 public class FormDefintionOverview 
 {
   public string internalName { get; set; }
   public string name { get; set; }
   public string client { get; set; }
   public Tabs tabs { get; set; }  
+  public TabActions tabActions { get; set; }  
 }
